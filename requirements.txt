@@ -1,0 +1,13 @@
+torch>=2.1.0
+transformers>=4.38.0
+peft>=0.10.0
+accelerate>=0.27.0
+unsloth>=2024.1
+bitsandbytes>=0.42.0
+datasets>=2.18.0
+evaluate>=0.4.1
+rouge-score>=0.1.2
+bert-score>=0.3.13
+ragas>=0.1.7
+gradio>=4.20.0
+huggingface_hub>=0.20.0
