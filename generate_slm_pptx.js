@@ -1,3 +1,4 @@
+const path = require("path");
 const pptxgen = require("pptxgenjs");
 
 let pres = new pptxgen();
@@ -168,5 +169,5 @@ features.forEach((f, i) => {
   });
 });
 
-pres.writeFile({ fileName: "/home/issmt/IAE-SLMS/small_language_models.pptx" });
-console.log("Done — saved to /home/issmt/IAE-SLMS/small_language_models.pptx");
+pres.writeFile({ fileName: path.join(__dirname, "small_language_models.pptx") });
+console.log("Done — saved to small_language_models.pptx");

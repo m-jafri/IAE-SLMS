@@ -1,5 +1,6 @@
 "use strict";
 
+const path = require("path");
 const pptxgen = require("pptxgenjs");
 
 async function buildPresentation() {
@@ -922,7 +923,7 @@ async function buildPresentation() {
     );
   }
 
-  await pres.writeFile({ fileName: "/home/issmt/IAE-SLMS/small_language_models.pptx" });
+  await pres.writeFile({ fileName: path.join(__dirname, "small_language_models.pptx") });
   console.log("Presentation written to small_language_models.pptx");
 }
 

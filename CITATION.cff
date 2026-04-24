@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+title: "IAE-SLMS: Small Language Models — Applications, Fine-Tuning & Deployment"
+message: "If you use this research, datasets, or any part of this repository, please cite it as below."
+type: software
+abstract: >-
+  Five task-specific studies on adapting small language models (270M–8B parameters)
+  using parameter-efficient fine-tuning (LoRA/QLoRA) for production NLP tasks.
+  Covers multilingual sentiment classification across English, Arabic, Urdu, and
+  Roman Urdu (120K-sample curated dataset); chain-of-thought reasoning induction
+  via supervised fine-tuning; length-controlled abstractive summarization with
+  epoch-wise hallucination analysis; the first fine-tuned conversational AI for
+  Roman Urdu (a low-resource language with 70M+ speakers); and retrieval-augmented
+  generation with perfect retrieval precision. All experiments run on free-tier
+  Google Colab GPUs using 4-bit NF4 quantization, achieving 74% GPU memory
+  reduction via QLoRA. Deployment benchmarked on CPU (llama.cpp) and GPU (vLLM).
+authors:
+  - name: "IAE SLMS Research Team"
+keywords:
+  - small language models
+  - parameter-efficient fine-tuning
+  - LoRA
+  - QLoRA
+  - Unsloth
+  - multilingual sentiment analysis
+  - language identification
+  - chain-of-thought reasoning
+  - abstractive text summarization
+  - hallucination detection
+  - Roman Urdu NLP
+  - low-resource languages
+  - conversational AI
+  - retrieval-augmented generation
+  - RAG pipeline
+  - model quantization
+  - 4-bit NF4
+  - llama.cpp
+  - vLLM
+  - edge deployment
+  - Gemma
+  - Qwen
+  - Mistral
+  - Llama
+repository-code: "https://github.com/IAE-SLMS/IAE-SLMS"
+license: MIT
+date-released: "2025-01-01"
