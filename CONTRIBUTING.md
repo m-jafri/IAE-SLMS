@@ -11,7 +11,7 @@ Thank you for your interest in contributing to the IAE Small Language Models res
 
 ## Notebook Guidelines
 
-- Each task lives in its own directory (e.g., `chain_of_thought/`, `rag/`).
+- Each task lives in its own directory (e.g., `chain_of_thought/`, `retrieval_augmented_generation/`).
 - Place notebooks inside a `colabs/` subdirectory when multiple contributors work on the same task.
 - Name notebooks descriptively: `{model}_{task}_{author}.ipynb` (e.g., `mistral_7b_roman_urdu_sanakhalid.ipynb`).
 - Every notebook must be **self-contained** — a reader should be able to run it top-to-bottom on Google Colab (free-tier T4 or A100) without external setup.
@@ -48,7 +48,6 @@ Thank you for your interest in contributing to the IAE Small Language Models res
 ## Code Style
 
 - **Python notebooks**: follow PEP 8 where practical; use descriptive variable names.
-- **JavaScript** (`generate_slm_deck.js`): use `"use strict"`, `const`/`let`, and consistent formatting.
 - Keep dependencies minimal — only add packages that are actively used.
 
 ## Questions?

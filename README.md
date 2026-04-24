@@ -83,7 +83,7 @@ Full benchmark details: [BENCHMARKS.md](BENCHMARKS.md)
 | 2 | [Chain-of-Thought Reasoning](chain_of_thought/) | `chain_of_thought/` | Llama 3.2 | Supervised CoT fine-tuning |
 | 3 | [Length-Controlled Summarization](text_summarization/) | `text_summarization/` | Mistral 7B Instruct v0.2 | QLoRA + SFT on CNN/DailyMail |
 | 4 | [Roman Urdu Conversational AI](roman_urdu/) | `roman_urdu/` | Llama 3.1-8B, Qwen 2.5-3B, Mistral 7B | QLoRA on Roman Urdu Alpaca QA |
-| 5 | [Retrieval-Augmented Generation](rag/) | `rag/` | Fine-tuned SLM + vector store | Encoder → Retriever → Generator |
+| 5 | [Retrieval-Augmented Generation](retrieval_augmented_generation/) | `retrieval_augmented_generation/` | Fine-tuned SLM + vector store | Encoder → Retriever → Generator |
 
 ---
 
@@ -92,19 +92,12 @@ Full benchmark details: [BENCHMARKS.md](BENCHMARKS.md)
 ### Reproduce All Experiments (Python)
 
 ```bash
-git clone https://github.com/IAE-SLMS/IAE-SLMS.git
+git clone https://github.com/m-jafri/IAE-SLMS.git
 cd IAE-SLMS
 pip install -r requirements.txt
 ```
 
 Open any `.ipynb` notebook in **Google Colab** (T4 / A100 runtime), mount the sibling dataset folder, and run top-to-bottom. Every notebook is self-contained — no external configuration required.
-
-### Generate Presentation (Node.js)
-
-```bash
-npm install
-npm run generate    # builds small_language_models.pptx
-```
 
 ---
 
@@ -190,7 +183,7 @@ IAE-SLMS/
 │   ├── datasets/                    Roman Urdu Alpaca QA Mix
 │   └── roman_urdu_language_models_report.pdf
 │
-├── rag/                             Task 5 — RAG pipeline
+├── retrieval_augmented_generation/   Task 5 — RAG pipeline
 │   ├── rag_pipeline.ipynb
 │   └── retrieval_augmented_generation_report.pdf
 │
@@ -198,7 +191,6 @@ IAE-SLMS/
 ├── RESEARCH_SUMMARY.md              Executive summary for stakeholders
 ├── BENCHMARKS.md                    Comprehensive performance benchmarks
 ├── requirements.txt                 Python dependencies
-├── package.json                     Node.js dependencies (deck generation)
 ├── CONTRIBUTING.md                  Contribution guidelines
 ├── CITATION.cff                     Academic citation metadata
 └── LICENSE                          MIT License
@@ -216,7 +208,7 @@ IAE-SLMS/
 | [Sentiment Report](multilingual_sentiment/multilingual_sentiment_report.pdf) | Task 1 — Sentiment classification report |
 | [Summarization Report](text_summarization/text_summarization_report.pdf) | Task 3 — Summarization report |
 | [Roman Urdu Report](roman_urdu/roman_urdu_language_models_report.pdf) | Task 4 — Roman Urdu chatbot report |
-| [RAG Report](rag/retrieval_augmented_generation_report.pdf) | Task 5 — RAG pipeline report |
+| [RAG Report](retrieval_augmented_generation/retrieval_augmented_generation_report.pdf) | Task 5 — RAG pipeline report |
 
 ---
 
@@ -271,7 +263,7 @@ If you use this research, datasets, or any part of this repository, please cite:
   author    = {IAE SLMS Team},
   year      = {2025},
   publisher = {GitHub},
-  url       = {https://github.com/IAE-SLMS/IAE-SLMS},
+  url       = {https://github.com/m-jafri/IAE-SLMS},
   note      = {Research repository: five studies on parameter-efficient fine-tuning of sub-10B models}
 }
 ```

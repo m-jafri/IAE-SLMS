@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-IAE-SLMS is a research repository containing five studies on parameter-efficient fine-tuning of small language models (270M–8B params) using LoRA/QLoRA. All experiments run on free-tier Google Colab (T4/A100). The codebase is primarily Jupyter notebooks (Python) with two Node.js scripts for presentation generation.
+IAE-SLMS is a research repository containing five studies on parameter-efficient fine-tuning of small language models (270M–8B params) using LoRA/QLoRA. All experiments run on free-tier Google Colab (T4/A100). The codebase is primarily Jupyter notebooks (Python).
 
 ## Commands
 
@@ -13,13 +13,6 @@ IAE-SLMS is a research repository containing five studies on parameter-efficient
 pip install -r requirements.txt
 ```
 Notebooks are designed for Google Colab, not local execution. Open `.ipynb` files in Colab, select T4/A100 runtime, and run top-to-bottom. Each notebook is self-contained with its own `!pip install` cells.
-
-### Node.js (presentation generation)
-```bash
-npm install
-npm run generate          # runs generate_slm_deck.js → small_language_models.pptx
-npm run generate:alt      # runs generate_slm_pptx.js (alternate theme)
-```
 
 There are no test suites or linters configured.
 
@@ -35,15 +28,11 @@ Each task is a self-contained directory with notebooks, datasets, and a PDF repo
 | `chain_of_thought/` | Chain-of-thought reasoning induction | Llama 3.2 |
 | `text_summarization/` | Length-controlled summarization (CNN/DailyMail) | Mistral 7B Instruct v0.2 |
 | `roman_urdu/` | Roman Urdu conversational AI | Llama 3.1-8B, Qwen 2.5-3B, Mistral 7B |
-| `rag/` | Retrieval-augmented generation pipeline | SLM + vector store |
+| `retrieval_augmented_generation/` | Retrieval-augmented generation pipeline | SLM + vector store |
 
 ### Shared Training Config
 
 All tasks use: QLoRA/LoRA fine-tuning, 4-bit NF4 quantization, AdamW 8-bit optimizer, cosine annealing LR scheduler, LoRA rank 16 / alpha 32, LR 1e-5, batch size 8, gradient accumulation 2. Fine-tuning is done via Unsloth.
-
-### Presentation Generators
-
-Two Node.js scripts (`generate_slm_deck.js`, `generate_slm_pptx.js`) use `pptxgenjs` to programmatically build PowerPoint decks summarizing the research. They differ only in visual theme (cyan vs coral accent).
 
 ### Datasets
 
